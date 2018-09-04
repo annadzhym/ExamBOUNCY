@@ -1,0 +1,71 @@
+.footer {
+  height: 771px;
+
+  &__info {
+    padding: 70px 0 70px 14px;
+    height: 96px;
+    .flex-column-between-center;
+    text-align: center;
+  }
+
+  &__title {
+    .section-titles;
+  }
+
+  &__text {
+    color: @lightgrey;
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  &__map {
+    height: 439px;
+    background: @green;
+  }
+
+  &__filling {
+    width: 100%;
+    height: 136px;
+    padding: 56px 0;
+    .flex-column-between-center;
+  }
+
+  &__content {
+
+    &--img {
+      background: url("../img/social.png") no-repeat top left;
+      height: 26px;
+      width: 26px;
+      display: inline-flex;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        border: 2px solid @darkgrey;
+        border-radius: 50%;
+      }
+    }
+
+    &--fb {
+      background-position: 0 0;
+    }
+
+    &--twitter {
+      background-position: -36px 0;
+    }
+
+    &--linkedin {
+      background-position: -72px 0;
+    }
+
+    &--instagram {
+      background-position: -108px 0;
+    }
+
+    &--vimeo {
+      background-position: -144px 0;
+    }
+  }
+}

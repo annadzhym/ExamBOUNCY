@@ -1,0 +1,41 @@
+.header {
+  background: url("../img/watchtoer.jpeg") no-repeat;
+  background-size: cover;
+  color: @white;
+  height: 730px;
+
+  &__container {
+    margin: 0 7.1%;
+    height: 100%;
+    padding-top: 1.7%;
+  }
+
+  &__text {
+    .flex-column-between-center;
+    height: 52%;
+    text-align: center;
+  }
+
+  &__title {
+    .upper-color-text(@white);
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    line-height: 67px;
+    margin: 0 0 15px 10px;
+  }
+
+  &__subtext {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__scroll {
+    width: 20px;
+
+    &:hover {
+      border-radius: 50%;
+      background-color: @green;
+    }
+  }
+}

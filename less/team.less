@@ -1,0 +1,86 @@
+.team {
+  height: 764px;
+
+  &__dots button:before {
+    margin-top: 30px !important;
+    .slider-dots;
+  }
+
+  &__dots li.slick-active button:before {
+    background: @green !important;
+  }
+
+  &__info {
+    padding: 80px 0 44px 14px;
+    height: 96px;
+    .flex-column-between-center;
+    text-align: center;
+  }
+
+  &__title {
+    .section-titles;
+  }
+
+  &__text {
+    color: @lightgrey;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  &__slider {
+    height: 400px;
+
+    &--flex {
+      padding: 14px 47px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--column {
+      .flex-column;
+      width: 28%;
+      position: relative;
+    }
+
+    &--text {
+      width: 39%;
+      height: 290px;
+      padding: 0 42px;
+      margin-top: 25px;
+      overflow: auto;
+      text-align: right;
+      color: @lightgrey;
+      font-size: 14px;
+      font-weight: 400;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: @green;
+        height: 42px;
+
+        &:hover {
+          background-color: @darkgrey;
+        }
+      }
+    }
+
+    &--headings {
+      margin-bottom: 15px;
+    }
+
+    &--name {
+      color: @grey;
+      font-size: 20px;
+    }
+
+    &--position {
+      .upper-color-text(@lightgrey);
+      font-weight: 300;
+      letter-spacing: 1.4px;
+      font-style: italic;
+    }
+  }
+}

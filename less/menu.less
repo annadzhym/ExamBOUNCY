@@ -1,0 +1,31 @@
+.menu {
+  height: 33.3%;
+
+  &__content {
+    .flex-between-center;
+    height: 70px;
+  }
+
+  &__title {
+
+    &:hover {
+     .menu-hover;
+    }
+  }
+
+  &__nav {
+    width: 26%;
+    display: flex;
+    justify-content: space-around;
+
+    &--el {
+      text-decoration: none;
+      color: @white;
+      padding: 11px 21px;
+
+      &:hover {
+        .menu-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.contact {
+  background: url("../img/contact.jpeg")  no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__flex {
+    .flex-column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: @white;
+    height: 199px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__button {
+   .button;
+    background: transparent;
+  }
+
+  &__dialog {
+    .absolute;
+    width: 40%;
+    height: 450px;
+    border: 5px solid @darkgrey;
+    border-top: 30px solid @darkgrey;
+    background: transparent;
+    display: none;
+    padding: 15px;
+
+    &--container {
+      .flex-column-between-center;
+      height: 100%;
+    }
+
+    &--close {
+      position: absolute;
+      top: -25px;
+      right: 0;
+    }
+
+    &--submit {
+      .button;
+      background: @green;
+      text-transform: uppercase;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    margin-bottom: 13px;
+    text-indent: 12px;
+    height: 44px;
+    background: @green;
+    color: @white;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: @white;
+    }
+
+    &:hover {
+      background: @lightgrey;
+    }
+
+    &:focus {
+      background: @darkgrey;
+    }
+
+    &--message {
+      height: 220px;
+    }
+  }
+}
