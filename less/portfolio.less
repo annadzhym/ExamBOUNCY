@@ -3,6 +3,22 @@
   background: @darkwhite;
   padding-bottom: 2%;
 
+  @media only screen and (min-width: 1490px) and (max-width: 1750px){
+    height: 1600px;
+  }
+  @media only screen and (min-width: 1751px) and (max-width: 2030px){
+    height: 1800px;
+  }
+  @media only screen and (min-width: 2031px) and (max-width: 2200px){
+    height: 2000px;
+  }
+  @media only screen and (min-width: 2201px){
+    height: 2250px;
+  }
+  @media only screen and (min-width: 2653px){
+    height: 2350px;
+  }
+
   &__info {
     padding: 88px 0 66px;
     height: 96px;
@@ -62,6 +78,7 @@
 
     &--el img {
       width: 96%;
+      padding: 0 2%;
     }
   }
 }
