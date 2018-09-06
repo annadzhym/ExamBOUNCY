@@ -1,13 +1,7 @@
 .portfolio {
   height: 1391px;
   background: @darkwhite;
-
-  @media screen and (max-width: 1320px) {
-    height: 1900px;
-  }
-  @media screen and (max-width: 986px) {
-    height: 2350px;
-  }
+  padding-bottom: 2%;
 
   &__info {
     padding: 88px 0 66px;
@@ -61,12 +55,13 @@
     width: 100%;
     margin: 0 auto;
 
-    &--el {
-      margin-bottom: 10px;
+    &--el, .grid-sizer {
+      width: 25%;
+      margin-bottom: 5px;
+    }
 
-      &img {
-        width: 250px;
-      }
+    &--el img {
+      width: 96%;
     }
   }
 }

@@ -4,7 +4,6 @@
     $('.menu__nav--el, .header__scroll, .footer__heading, .menu__title').click(function (e) {
         e.preventDefault();
         var target = $(this.hash);
-
         $('html, body').animate({
             scrollTop: target.offset().top
         }, 1000)
@@ -13,8 +12,9 @@
     var $pictures = $('.portfolio__pictures').isotope({
         itemSelector: '.portfolio__pictures--el',
         masonry: {
-            gutter: 10,
-            horizontalOrder: true
+            columnWidth: '.grid-sizer',
+            horizontalOrder: true,
+            percentPosition: true,
            }
        });
 
@@ -33,31 +33,31 @@
             dots: true,
             dotsClass: 'slick-dots team__dots'
         });
+        $('.team__slider--text').click(function next() {
+            $('.team__carousel').slick('slickNext');
+        });
     });
 
-    $('.team__slider--text').click(function next() {
-        $('.team__carousel').slick('slickNext');
-    })
-
     $(document).ready(function () {
-        $('.contact__button').click(function open() {
+        function open() {
             $('.contact__dialog').fadeIn('fast');
             $('.contact__text').fadeOut();
             $('.contact__button').fadeOut();
-        });
-
-        $('.contact__dialog--close').click(function close() {
+        }
+        function close() {
             $('.contact__dialog').fadeOut('slow');
             $('.contact__button').fadeIn();
             $('.contact__text').fadeIn();
-        });
-
-        $('.contact__dialog--submit').click(function submit() {
+        }
+        function submit() {
             $('.contact__dialog').fadeOut('slow');
             $('.contact__button').fadeIn();
             $('.contact__text').fadeIn();
             console.log('You submitted the form.');
-        });
+        }
+        $('.contact__button').click(open);
+        $('.contact__dialog--close').click(close);
+        $('.contact__dialog--submit').click(submit);
     });
 
     $(document).ready(function() {
@@ -70,20 +70,20 @@
             dots: true,
             dotsClass: 'slick-dots testimonials__dots'
         });
+        $('.testimonials__carousel').click(function next() {
+            $('.testimonials__carousel').slick('slickNext');
+        });
     });
 
-    $('.testimonials__carousel').click(function next() {
-        $('.testimonials__carousel').slick('slickNext');
+    $(document).ready(function() {
+        var elMap = $('.footer__map')[0];
+        var place = {lat: 49.569127, lng: 34.585632};
+        var mymap = new google.maps.Map(elMap, {
+            zoom: 16,
+            center: place,
+        });
+        var marker = new google.maps.Marker({position: place, map: mymap, icon: "./img/marker.png"});
     });
-
-    var elMap = $('.footer__map')[0];
-    var place = {lat: 49.569127, lng: 34.585632};
-    var mymap = new google.maps.Map(elMap, {
-        zoom: 16,
-        center: place,
-    });
-    var marker = new google.maps.Marker({position: place, map: mymap,  icon: "./img/marker.png"});
-
 
 
 })(jQuery);
